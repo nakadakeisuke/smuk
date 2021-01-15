@@ -1,0 +1,24 @@
+<h1>売上</h1>
+
+<%= form_with(model: @event, local: true) do |form| %>
+
+  <div class="title">
+    <%= form.label :お客様名 %>
+    <%= form.text_field :client %>
+  </div>
+
+    <div class="time">
+    <%= form.label :日にち %>
+    <%= form.datetime_select :start_time %>
+  </div>
+
+  <div class="content">
+    <%= form.label :売上 %>
+    <%= form.text_field :sales %>
+  </div>
+
+
+  <div class="submit">
+    <%= form.submit %>
+  </div>
+<% end %>
