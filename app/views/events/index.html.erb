@@ -1,11 +1,10 @@
-<%= link_to '売上入力', new_event_path %>
-
+<%= link_to '売上入力', new_event_path %> 
 <%= month_calendar events: @events do |date, events| %>
   <%= date.day %>
   <% events.each do |event| %>
     <div>
-      <%= event.sales %>
+      <p><%= event.sales.to_s(:delimited) %>円</p>
     </div>
   <% end %>
-<% end %>
-<p>売上合計:<%= @events.sales %></p>
+ <% end %>
+ <p>売上合計:<%= @events.sum(:sales).to_s(:delimited) %>円</p>
