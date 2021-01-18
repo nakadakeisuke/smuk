@@ -17,5 +17,5 @@ class EventsController < ApplicationController
   def event_parameter
     params.require(:event).permit(:client, :start_time, :sales)
   end
-  
+
 end
