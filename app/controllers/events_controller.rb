@@ -12,6 +12,10 @@ class EventsController < ApplicationController
     redirect_to root_path
   end
 
+  def show
+    @events = Event.where(sales:1).group("start_time").count
+  end
+
   private
 
   def event_parameter
