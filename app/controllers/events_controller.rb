@@ -1,6 +1,7 @@
 class EventsController < ApplicationController
   def index
     @events = Event.all
+    root_path
   end
 
   def new
@@ -10,6 +11,10 @@ class EventsController < ApplicationController
   def create
     Event.create(event_parameter)
     redirect_to root_path
+  end
+
+  def show
+    @events = Event.where(sales:1).group("start_time").count
   end
 
   private

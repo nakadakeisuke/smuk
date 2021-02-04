@@ -1,10 +1,18 @@
-<%= link_to '売上入力', new_event_path %> 
-<%= month_calendar events: @events do |date, events| %>
-  <%= date.day %>
-  <% events.each do |event| %>
-    <div>
-      <p><%= event.sales.to_s(:delimited) %>円</p>
+
+<body id="top">
+  <div class="sales-right">
+    <%= link_to '売上入力', new_event_path %> 
+    <%= link_to '売上推移', event_path(@events) %>
+  </div>
+    <%= month_calendar events: @events do |date, events| %>
+      <%= date.day %>
+      <% events.each do |event| %>
+        <div>
+          <p><%= event.sales.to_s(:delimited)%>円</p>
+        </div>
+      <% end %>
+    <% end %>
+    <div class="total">
+      <p>売上合計 : <%= @events.sum(:sales).to_s(:delimited)%> 円</p>
     </div>
-  <% end %>
- <% end %>
- <p>売上合計:<%= @events.sum(:sales).to_s(:delimited) %>円</p>
+</body>

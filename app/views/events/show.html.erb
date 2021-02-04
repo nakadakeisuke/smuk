@@ -1,0 +1,5 @@
+<p id="notice"><%= notice %></p>
+
+<h2>売上推移</h2>
+
+<%= line_chart Event.group(:start_time).sum(:sales) %>
