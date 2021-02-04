@@ -1,8 +1,9 @@
-<h1>売上</h1>
+
+<h2>売上入力</h2>
 
 <%= form_with(model: @event, local: true) do |form| %>
-
-  <div class="title">
+ <div class="sales">
+  <div class="client">
     <%= form.label :お客様名 %>
     <%= form.text_field :client %>
   </div>
@@ -21,4 +22,5 @@
   <div class="submit">
     <%= form.submit %>
   </div>
+ </div>
 <% end %>

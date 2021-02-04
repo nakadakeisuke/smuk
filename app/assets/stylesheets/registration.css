@@ -9,3 +9,10 @@
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.bg {
+  height: 100%;
+  padding: 100px 0px 400px 0px;
+  background: rgba(255,255,255,0.6)
+}
+
