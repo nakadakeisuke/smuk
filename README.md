@@ -1,44 +1,23 @@
-# README
-## usersテーブル
+# smuk売上管理
+* 売上の入力、売上の管理を行える
+* smukとは私の嫁が働いている美容室の店名
 
-| Column            | Type       | 
-Options                          |
-| ---------------   | ---------- | -----------              |
-| name              | string     | null: false              |
-| email             | string     | null: false, unique: true|
-| encrypted_password| string     | null: false              |
+# 機能
+* ユーザー管理機能
+→ログインをすることで、ログインユーザーの売上を管理可能
 
-## Association
-- 
-- has_many  :sales
+* 売上管理機能
+→売上を入力すると、カレンダーとグラフに売上が反映され視覚的に売上を把握することができる
 
-## salesテーブル
-
-| Column            | Type       | 
-Options                          |
-| ---------------   | ---------- | -----------                   |
-| price             | string     | null: false                   |
-| clients           | references | null: false, foreign_key: true|
-
-## Association
-belongs_to :user
-has_many   :menus
-belongs_to :client
-
-## clientsテーブル
-| Column            | Type       | 
-Options                          |
-| ---------------   | ---------- | -----------                   |
-| name              | string     | null: false                   |
-
-## Association
-- has_many :sales
-
-## menusテーブル
-| Column            | Type       | 
-Options                          |
-| ---------------   | ---------- | -----------                   |
-| menu              | string     | null: false                   |
-
-## Association
-- belongs_to :clients
+# 使用したgem
+* "simplecalender"
+* "chartkick"
+ 
+# 今後の追加機能
+* メニュー表を作成し、メニューと連動した売上入力を可能にする
+* 顧客毎の売上の管理を可能にする
+ 
+# 情報
+* 作成者：中田佳佑
+* webURL: https://smuk0203.herokuapp.com/
+ 
