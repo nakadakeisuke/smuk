@@ -1,8 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>smuk</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
+
+  </head>
 <body id="top">
-  <div class="sales-right">
-    <%= link_to '売上入力', new_event_path %> 
-    <%= link_to '売上推移', event_path(@events) %>
+    <div class="content">
+        <a class="js-modal-open" href="">クリックでモーダルを表示</a>
+    </div>
+    <div class="modal js-modal">
+        <div class="modal__bg js-modal-close"></div>
+        <div class="modal__content">
+        <p>ここにモーダルウィンドウで表示したいコンテンツを入れます。モーダルウィンドウを閉じる場合は下の「閉じる」をクリックするか、背景の黒い部分をクリックしても閉じることができます。</p>
+            <a class="js-modal-close" href="">閉じる</a>
+        </div><!--modal__inner-->
+    </div><!--modal-->
+  <div class="total">
+      <p>¥ <%= @events.sum(:sales).to_s(:delimited)%></p>
   </div>
     <%= month_calendar events: @events do |date, events| %>
       <%= date.day %>
@@ -12,7 +32,5 @@
         </div>
       <% end %>
     <% end %>
-    <div class="total">
-      <p>売上合計 : <%= @events.sum(:sales).to_s(:delimited)%> 円</p>
-    </div>
 </body>
+</html>

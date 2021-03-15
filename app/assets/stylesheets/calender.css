@@ -1,0 +1,17 @@
+.simple-calendar {
+  margin: 0 50px;
+}
+
+.calendar-heading {
+  padding-top:15px;
+  font-size: 20px;
+}
+
+.wday-6 {
+  color: blue;
+}
+.wday-0 {
+  color: red;
+}
+
+

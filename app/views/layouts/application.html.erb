@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Smuk</title>
+    <title>smuk</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -15,9 +15,12 @@
        <div class="logo">
         <%= link_to "s m u k", "/" %>
        </div>
-        <%# <a href= class="brand">SMUK</a> %>
          <% if user_signed_in?%>
           <ul class="nav__wrapper">
+            <li class="nav__item">
+              <%= link_to '売上入力', new_event_path %>
+            <li class="nav__item">
+              <%= link_to '売上推移', event_path(@events) %>
             <li class="nav__item">
               <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
           </ul>

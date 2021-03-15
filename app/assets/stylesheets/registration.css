@@ -4,15 +4,38 @@
   background-size: cover;
 } */
 
-#registration {
+/* #registration {
   background-image: url("smuk.png");
   background-repeat: no-repeat;
   background-size: cover;
-}
+} */
 
-.bg {
+/* .bg {
   height: 100%;
   padding: 100px 0px 400px 0px;
   background: rgba(255,255,255,0.6)
+} */
+
+.bg {
+  width: 400px;
+  margin: 30px auto;
+  padding: 20px;
+  border: 1px solid #555;
 }
 
+.field {
+  font-size: 14px;
+  margin-bottom: 20px;
+  width: 300px;
+  padding: 4px;
+}
+
+.actions {
+  text-align: right;
+  font-family: Arial;
+}
+
+.bg h2 {
+  text-align: center;
+  border-bottom: 2px solid gray;
+}

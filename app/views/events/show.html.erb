@@ -1,5 +1,22 @@
-<p id="notice"><%= notice %></p>
+<head>
+    <title>smuk</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-<h2>売上推移</h2>
+
+</head>
+<div class="chart">
+
+  <p id="notice"><%= notice %></p>
+
+  <h2>売上推移</h2>
 
 <%= line_chart Event.group(:start_time).sum(:sales) %>
+
+  <div class="back">
+    <%= link_to "BACK", "/" %>
+  </div>
+</div>
