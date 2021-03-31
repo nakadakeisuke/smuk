@@ -60,3 +60,4 @@ gem 'simple_calendar', '~> 2.0'
 gem "chartkick"
 gem "groupdate"
 gem "jquery-rails"
+gem 'bootstrap', '~> 4.1.1'

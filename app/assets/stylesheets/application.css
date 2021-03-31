@@ -48,7 +48,7 @@ footer {
   border-radius: 0 10px 10px 10px;
   position: relative;
   float:right;
-  margin: 0 50px 5px 0;
+  margin: 30px 50px 5px 0;
 }
 
 .total:before {
@@ -65,30 +65,10 @@ footer {
 }
 
 .chart h2 {
-  position: relative;
-  display: inline-block;
-  padding: 0 65px;
-  text-align: center;
-  margin: 10px 0 10px 45px;
-}
-
-.chart h2:before,
-.chart h2:after {
-  position: absolute;
-  top: calc(50% - 3px);
-  width: 50px;
-  height: 6px;
-  content: '';
-  border-top: solid 2px #000;
-  border-bottom: solid 2px #000;
-}
-
-.chart h2:before {
-  left: 0;
-}
-
-.chart h2:after {
-  right: 0;
+  border-left: 5px solid #000;
+  background: #f4f4f4;
+  padding: 10px;
+  margin: 20px 30px 20px 10px;
 }
 
 .client {
@@ -218,26 +198,22 @@ a {
       display: block;
       position: absolute;
       right: 1rem;
-      top: 1rem; } }
-  .modal{
-        display: none;
-        height: 100vh;
-        position: fixed;
-        top: 0;
-        width: 100%;
+      top: 1rem; }
+}
+
+/* new.html */
+.input_title h2 {
+    border-left: 5px solid #000;
+    background: #f4f4f4;
+    padding: 10px;
+    margin: 20px 0;
   }
-  .modal__bg{
-        background: rgba(0,0,0,0.8);
-        height: 100vh;
-        position: absolute;
-        width: 100%;
-  }
-  .modal__content{
-        background: #fff;
-        left: 50%;
-        padding: 40px;
-        position: absolute;
-        top: 50%;
-        transform: translate(-50%,-50%);
-        width: 60%;
-  }
+
+.input {
+  display: inline-block;
+  margin-left: 20px;
+}
+
+.submit {
+  margin-bottom: 50px;
+}

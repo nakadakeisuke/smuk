@@ -1,26 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>smuk</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
 
-<h2>売上入力</h2>
+  </head>
+<div class="input">
 
-<%= form_with(model: @event, local: true) do |form| %>
- <div class="sales">
-  <div class="client">
-    <%= form.label :お客様名 %>
-    <%= form.text_field :client %>
+  <div class="input_title">
+    <h2>売上入力</h2>
   </div>
+ <div class="input_body">
+  <%= form_with(model: @event, local: true) do |form| %>
+  <div class="sales">
+    <div class="client">
+      <%= form.label :お客様名 %>
+      <%= form.text_field :client %>
+    </div>
 
-    <div class="time">
-    <%= form.label :日にち %>
-    <%= form.datetime_select :start_time %>
+      <div class="time">
+      <%= form.label :日にち %>
+      <%= form.datetime_select :start_time %>
+    </div>
+
+    <div class="content">
+      <%= form.label :売上 %>
+      <%= form.text_field :sales %>
+    </div>
+
+    <div class="submit">
+      <%= form.submit "保存"%>
+    </div>
+  
   </div>
-
-  <div class="content">
-    <%= form.label :売上 %>
-    <%= form.text_field :sales %>
-  </div>
-
-
-  <div class="submit">
-    <%= form.submit %>
+  <% end %>
+  <div class="back">
+    <%= link_to "BACK", "/" %>
   </div>
  </div>
-<% end %>
+</div>
+</html>
