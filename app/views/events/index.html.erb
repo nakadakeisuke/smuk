@@ -12,7 +12,7 @@
 <body id="top">
 
   <div class="total">
-      <p>¥ <%= @events.sum(:sales).to_s(:delimited)%></p>
+      ¥ <%= @events.sum(:sales).to_s(:delimited)%>
   </div>
     <%= month_calendar events: @events do |date, events| %>
       <%= date.day %>

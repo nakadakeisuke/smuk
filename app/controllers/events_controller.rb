@@ -1,6 +1,7 @@
 class EventsController < ApplicationController
   def index
     @events = Event.all
+    @sales_month = Event.group("MONTH(start_time)").sum(:sales)
     root_path
   end
 
